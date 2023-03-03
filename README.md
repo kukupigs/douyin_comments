@@ -1,3 +1,6 @@
+# 如果出现错误可以看看issues，里面介绍了程序运行步骤。
+# if there is an error, look at issues, which describes the procedure for running the program.
+
 # 导入所需的模块
 
 import os from selenium import webdriver from selenium.webdriver.common.by import By import time import random
