@@ -2,7 +2,6 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-import random
 
 
 account_home_page= 'https://www.douyin.com/user/MS4wLjABAAAAABJTNtdE9bZKmIZfL_pR15F8X0VNK591ffRA9pXXZsw'
