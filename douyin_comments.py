@@ -16,6 +16,7 @@ def drop_down(video_or_comment):
         curr_num = len(driver.find_elements(By.CSS_SELECTOR, '.Eie04v01'))
         curr_height = driver.execute_script("return document.documentElement.scrollHeight")
         driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
+        time.sleep(3)
         new_height = driver.execute_script("return document.documentElement.scrollHeight")
         new_num = len(driver.find_elements(By.CSS_SELECTOR, '.Eie04v01'))
         max_num = 10 * video_num
@@ -25,6 +26,7 @@ def drop_down(video_or_comment):
         curr_num = len(driver.find_elements(By.XPATH, '//*[@id="douyin-right-container"]/div[2]/div/div[1]/div[5]/div/div/div[4]/*/div/div[2]/div'))
         curr_height = driver.execute_script("return document.documentElement.scrollHeight")
         driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
+        time.sleep(3)
         new_height = driver.execute_script("return document.documentElement.scrollHeight")
         new_num = len(driver.find_elements(By.XPATH, '//*[@id="douyin-right-container"]/div[2]/div/div[1]/div[5]/div/div/div[4]/*/div/div[2]/div'))
         max_num = 10 * comment_num
@@ -80,7 +82,7 @@ def extract(comment_splitted):
 
 driver = webdriver.Chrome()
 driver.get(account_home_page)
-time.sleep(5)
+time.sleep(10)
 drop_down("video")
 driver.implicitly_wait(10)
 
@@ -103,7 +105,7 @@ num = 0
 for url, video_like in url_likes[:min(video_num, len(url_likes))]:
     num += 1
     driver.get(url)
-    time.sleep(random.randint(1, 2))
+    time.sleep(3)
     drop_down("comment")
 
     comments = driver.find_elements(By.XPATH, '//*[@id="douyin-right-container"]/div[2]/div/div[1]/div[5]/div/div/div[4]/*/div/div[2]/div')
