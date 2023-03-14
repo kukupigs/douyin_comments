@@ -1,3 +1,18 @@
+# 使用方式：运行douyin_comments.py文件，当页面出现弹窗验证时要快速手动验证，等待页面自行滑动，完成后保存在文件夹中，以下是可供调节的参数
+```python
+#想要爬取的个人主页
+account_home_page= 'https://www.douyin.com/user/MS4wLjABAAAAKouSmCULyRPvwO2ECzsUljHEmlAxvRIJSy3Q30VEuu0'
+#想要爬取的视频数量
+video_num = 10
+#翻阅的最大视频数量，为了控制程序运行时间
+max_video_num = 100
+#想要爬取的评论数量
+comment_num = 10
+#翻阅的最大评论数量，为了控制程序运行时间
+max_comment_num = 50
+
+```
+
 # 如果出现错误可以看看issues，里面介绍了程序运行步骤。
 
 # if there is an error, look at issues, which describes the procedure for running the program.
